@@ -11,16 +11,16 @@ public abstract class Creature extends Thing {
 	}
 		public void eat(Thing aThing){
 			setLastEat(aThing);
-			System.out.println("This " + this.toString() + " has just eaten " + aThing.toString());
+			System.out.println(this.getClass().getSimpleName() + " has just eaten " + aThing.getClass().getSimpleName());
 		}
 		
 		public abstract void move();
 		
 		public void whatDidYouEat(){
 		if (getLastEat()!=null){
-			System.out.println("The last thing I ate was " +this.getLastEat().toString());
+			System.out.println(this.toString() +" has eaten a "+this.getLastEat().toString());
 		}else{
-			System.out.println("I have not eaten anything");
+			System.out.println(this.toString() +" has had nothing to eat!");
 			}
 		}
 		public Thing getLastEat() {

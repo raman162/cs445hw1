@@ -18,11 +18,11 @@ public class Bat extends Creature implements Flyer{
 	}
 	@Override
 	public void eat(Thing aThing){
-		if (aThing.getClass().getClass().getSimpleName() != "Creature"){
-			System.out.println(this.toString() + " won't eat a " +aThing.toString());
-		}else{
+//		System.out.println(aThing.getClass().getSuperclass().getSimpleName());
+		if (aThing.getClass().getSuperclass().getSimpleName().equals("Creature")){
 			super.eat(aThing);
-			
+		}else{
+			System.out.println(this.toString() + " won't eat a " +aThing.toString());
 		}
 	}
 

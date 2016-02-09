@@ -38,20 +38,43 @@ public class TestCreature {
 		creatureArray[8]=new Tiger("chris");
 		creatureArray[9]=new Ant("luda");
 		
-		for (int x=0; x<creatureArray.length; x++){
-			System.out.println(creatureArray[x].toString());
-		}
-		
 		Bat bat=(Bat) creatureArray[0];
 		Ant ant=(Ant) creatureArray[1];
 		Tiger tiger=(Tiger) creatureArray[2];
 		Fly fly=(Fly) creatureArray[4];
 		Thing thing=thingArray[0];
 		
-		System.out.println("\n");
-		tiger.eat(ant);
-		bat.eat(thing);
-		
+		for (int x=0; x<creatureArray.length; x++){
+			System.out.println(creatureArray[x].toString());
+			creatureArray[x].whatDidYouEat();
+			creatureArray[x].eat(thing);
+			creatureArray[x].whatDidYouEat();
+			creatureArray[x].eat(bat);
+			creatureArray[x].whatDidYouEat();
+			creatureArray[x].move();
+			System.out.println("\n");
+		}
+//		
+//		System.out.println("\n");
+//		tiger.eat(thing);
+//		tiger.whatDidYouEat();
+//		tiger.eat(bat);
+//		tiger.whatDidYouEat();
+//		bat.eat(thing);
+//		bat.whatDidYouEat();
+//		bat.eat(ant);
+//		bat.whatDidYouEat();
+//		fly.eat(thing);
+//		fly.whatDidYouEat();
+//		fly.eat(tiger);
+//		fly.whatDidYouEat();
+//		ant.eat(thing);
+//		ant.whatDidYouEat();
+//		ant.eat(bat);
+//		ant.whatDidYouEat();
+//		
+//		
+//		
 	}
 
 }
