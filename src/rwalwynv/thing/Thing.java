@@ -8,8 +8,11 @@ public class Thing {
 		this.name=name;
 	}
 	
+	public String getName(){
+		return this.name;
+	}
 
 	public String toString(){
-			return "Name: "+this.name;
+			return this.name +" " +this.getClass().getSimpleName();
 	}
 }
