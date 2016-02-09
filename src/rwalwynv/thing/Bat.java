@@ -13,7 +13,7 @@ public class Bat extends Creature implements Flyer{
 	
 	@Override
 	public void fly(){
-		System.out.println(this.toString() +" is swooping though the dark");
+		System.out.println(this.toString() +" is swooping through the dark");
 		
 	}
 	@Override
